@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home - TestProj</title>
+</head>
+<body>
+
+<h1>HOME Page of {{naam}}'s project</h1>
+{{today}}
+<br>
+Today is {{today.day}} day of {{today.month}} of {{today.year}}
+
+{% if today.day == 20 %} 
+<p>Today</p>
+<b>is aaj</b>
+{% elif today.day == 30 %}
+<p>NO</p>
+{% else %}
+<p>Nothing</p>
+{% endif %}
+
+</body>
+</html>
