@@ -8,6 +8,16 @@
 <i>Landed on Authpage</i>
 <br>
 <b>LOGIN or SIGNUP</b>
+<br>                                             {# note the leading '/' of index to make it init from root, else it appends to cur url #}
+<form action="/index/saverec/" target="_blank" method = "POST">         
+	{% csrf_token %}                                                 {# to prevent Cross-site Request Forgery (CSRF) attack on your site #}
+<input type="text" name="roll" placeholder="roll"><br>
+<input type="text" name="name" placeholder="name"><br>
+<input type="text" name="city" placeholder="city"><br>
+<input type="submit" name="submitbt" value="Submit">
+</form>
+
+<p>{{form.errors}}</p>
 
 </body>
 </html>

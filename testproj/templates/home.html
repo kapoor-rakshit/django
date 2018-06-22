@@ -19,5 +19,17 @@ Today is {{today.day}} day of {{today.month}} of {{today.year}}
 <p>Nothing</p>
 {% endif %}
 
+<p>{{roll}}</p>
+<p>{{city}}</p>
+<p>{{name}}</p>
+
+{% for i in entries %}
+
+<p>{{i.roll}}</p>
+<p>{{i.city}}</p>
+<p>{{i.name}}</p>
+
+{% endfor %}
+
 </body>
 </html>
