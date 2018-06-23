@@ -19,6 +19,19 @@ Today is {{today.day}} day of {{today.month}} of {{today.year}}
 <p>Nothing</p>
 {% endif %}
 
+<table>
+	<th>Roll</th>
+	<th>City</th>
+	<th>Name</th>
+	{% for item in object_list %}      {# 'object_list' var passed by generic view #}
+	<tr>
+		<td>{{item.roll}}</td>
+		<td>{{item.city}}</td>
+		<td>{{item.name}}</td>
+	</tr>
+	{% endfor %}
+</table>
+
 <p>{{roll}}</p>
 <p>{{city}}</p>
 <p>{{name}}</p>

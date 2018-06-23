@@ -1,4 +1,7 @@
 from django.urls import path, re_path
+from django.views.generic import ListView
+from index.models import testdb
+
 from index import views
 
 # To capture a value from the URL, use angle brackets.
@@ -20,6 +23,8 @@ urlpatterns = [
 	 path('readrec/', views.readrec, name = 'disp'),
 
 	 path('saverec/', views.saverec, name = 'save'),
+
+	 path('disprec/', ListView.as_view(model = testdb, template_name = "home.html")),
 
 	 path('auth/<int:id>/', views.authmsg1, name = 'oneparam'),                       
 
