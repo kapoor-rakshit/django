@@ -10,9 +10,12 @@ from index import views
 #              <slug:st>   slug - Matches any slug string consisting of ASCII letters or numbers, plus the hyphen and underscore characters
 # NOTE : var name must be same as arg passed to views.py func irrespective of order in which passed.
 
+# In order to perform URL reversing, use named URL patterns (by specifying name arg in path() func)
+
 # To use regular expressions. use re_path() instead of path().
 # the syntax for named regular expression groups is auth/(?P<name>pattern)/
 # eg : re_path(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/$', views.year_archive)
+
 
 urlpatterns = [
 	 
