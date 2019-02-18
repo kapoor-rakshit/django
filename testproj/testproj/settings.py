@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+  # __file__ is the pathname of the file from which the module was loaded
+  # os.path.abspath() function is used to turn that into an absolute path
+  # os.path.dirname() function simply removes the last segment of a path.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
